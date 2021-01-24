@@ -1,7 +1,17 @@
 import { useState, useEffect } from 'react';
 import './App.css';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+
+import { BrowserRouter as Router } from 'react-router-dom'
+
+
 
 function App() {
+  const [isOpen, setisOpen] = useState(false)
+  const toggle = () => {
+    setisOpen(!isOpen)
+  }
   const [user, setuser] = useState([
     {
       userName: '',
@@ -19,17 +29,23 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <div>
+      <Router >
+        <Navbar toggle={toggle} />
+        <h1>Hi</h1>
+
+        <Footer />
+      </Router>
       {console.log(user)}
-      <h1>Hi</h1>
-      {user.map(user => {
+
+      {/* {user.map(user => {
         return (
           <div>
             <h1>{user.userName}</h1>
 
           </div>
         )
-      })}
+      })} */}
     </div>
   );
 }
