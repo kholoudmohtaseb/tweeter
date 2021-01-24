@@ -10,11 +10,11 @@ const userSchema = new Schema({
         unique: true,
         type: String
     },
-    name: {
-        default: "",
-        required: true,
-        type: String
-    },
+    // name: {
+    //     default: "",
+    //     required: true,
+    //     type: String
+    // },
     email: {
         required: true,
         type: String,
@@ -52,22 +52,22 @@ const userSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     }],
-    tweets: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Tweet'
-    }],
-    retweets: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Tweet'
-    }],
-    likes: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Tweet'
-    }],
-    bookmarks: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Tweet'
-    }],
+    // tweets: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Tweet'
+    // }],
+    // retweets: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Tweet'
+    // }],
+    // likes: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Tweet'
+    // }],
+    // bookmarks: [{
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'Tweet'
+    // }],
 }, { timestamps: true })
 
 const User = mongoose.model('User', userSchema)
