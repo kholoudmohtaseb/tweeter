@@ -35,10 +35,9 @@ justify-content:space-between;
 height:80px;
 z-index:1;
 width:100%;
-padding:0 18px 0;
-max-width:700px;
-min-width:400px;
-display: flex;
+padding:0 18px;
+
+
 
 `;
 
@@ -48,8 +47,7 @@ display: flex;
 align-items:center;
 list-style:none;
 text-align:center;
-margin: auto;
-
+padding-inline-start: 0px;
 
 `;
 
@@ -62,7 +60,7 @@ color: #828282;
 display:flex;
 align-items:center;
 text-decoration:none;
-padding:0 10vw 0;
+padding:0 10vw;
 height:100%;
 cursor:pointer;
 

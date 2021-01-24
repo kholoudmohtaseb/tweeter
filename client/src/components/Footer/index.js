@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Foot, FootbarContainer, FootMenu, FootItem, FootLinks, Thefooter } from './Footerbarelements'
-import { IconContext } from 'react-icons/lib'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
@@ -52,7 +51,6 @@ const Footbar = ({ toggle }) => {
                                             <i className="fa fa-bookmark" style={{ color: '#828282', fontSize: '30px' }}></i>
                                         </FootLinks>
                                     </FootItem>
-
                                 </FootMenu>
 
                             </FootbarContainer>
