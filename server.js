@@ -5,12 +5,15 @@ const cors = require("cors");
 const path = require("path");
 const mongoose = require("mongoose");
 const port = process.env.PORT || 5000;
+const routers = require('./routes');
+
 
 app.use(bodyParser.json());
 app.use(cors());
 
 //mongoose
 mongoose.connect("mongodb+srv://qamar:1234@cluster0.5pa3p.mongodb.net/tweeterDB?retryWrites=true&w=majority", { useCreateIndex: true, useUnifiedTopology: true, useNewUrlParser: true })
+
 
 //data schema and model
 const userSchema = {
@@ -25,6 +28,7 @@ app.get('/test', function (req, res) {
     user.find().then(users => res.json(users));
 })
 
+app.use('/', routers)
 
 
 
