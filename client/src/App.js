@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
+import FormPage from './component/FormPage'
+
 function App() {
   const [user, setuser] = useState([
     {
@@ -8,7 +10,6 @@ function App() {
 
     }
   ])
-
 
   useEffect(() => {
     fetch('/test').then(res => {
@@ -30,6 +31,7 @@ function App() {
           </div>
         )
       })}
+      <FormPage />
     </div>
   );
 }
