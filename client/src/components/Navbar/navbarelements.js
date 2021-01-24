@@ -56,7 +56,7 @@ letter-spacing: -0.035em;
 color: #333333;
 margin-top:25px;
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 550px){
     display:none;
 }
 `;
@@ -71,7 +71,7 @@ font-size: 13px;
 line-height: 16px;
 letter-spacing: -0.035em;
 color: #333333;
-@media screen and (max-width: 780px){
+@media screen and (max-width: 550px){
     display:none;
 }
 `;
@@ -113,7 +113,7 @@ text-align:center;
 margin-right:-2px;
 
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 550px){
     display:none;
 }
 `;
@@ -127,7 +127,7 @@ color: #828282;
 display:flex;
 align-items:center;
 text-decoration:none;
-padding:0 2.6rem;
+padding:0 4vw 0;
 height:100%;
 cursor:pointer;
 

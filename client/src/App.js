@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
+
+
 import { BrowserRouter as Router } from 'react-router-dom'
 
 
@@ -36,6 +38,9 @@ function App() {
 
         <p>mvhccfhv  hcthcj</p>
         <p>mvhccfhv  hcthcj</p>
+
+        <p style={{ marginBottom: '40px' }}>mvhccfhv  hcthcj</p>
+
 
         <Footer />
       </Router>

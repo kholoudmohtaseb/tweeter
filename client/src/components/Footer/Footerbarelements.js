@@ -20,14 +20,24 @@ z-index:10;
 }
 `;
 
+export const Thefooter = styled.div`{
+    display: none;
+     
+    @media screen and (max-width: 550px){
+        display:flex;
+        position:fixed
+    }
+}`
+
 export const FootbarContainer = styled.div`
 display:flex;
 justify-content:space-between;
 height:80px;
 z-index:1;
 width:100%;
-padding:0 18px;
-max-width:1200px;
+padding:0 18px 0;
+max-width:700px;
+min-width:400px;
 display: flex;
 
 `;
@@ -38,7 +48,7 @@ display: flex;
 align-items:center;
 list-style:none;
 text-align:center;
-margin-right:-2px;
+margin: auto;
 
 
 `;
@@ -52,19 +62,14 @@ color: #828282;
 display:flex;
 align-items:center;
 text-decoration:none;
-padding:0 2rem;
+padding:0 10vw 0;
 height:100%;
 cursor:pointer;
 
 font-family: Poppins;
 font-weight: 600;
 font-size: 14px;
-// line-height: 21px;
-
 letter-spacing: -0.035em;
-
-
-
 &.active {
     border-bottom: 3px solid #2F80ED;
     color: #2F80ED;
