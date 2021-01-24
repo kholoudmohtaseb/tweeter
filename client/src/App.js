@@ -34,6 +34,9 @@ function App() {
         <Navbar toggle={toggle} />
         <h1>Hi</h1>
 
+        <p>mvhccfhv  hcthcj</p>
+        <p>mvhccfhv  hcthcj</p>
+
         <Footer />
       </Router>
       {console.log(user)}
