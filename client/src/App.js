@@ -31,7 +31,7 @@ function App() {
   })
 
   return (
-    <div>
+    <div className="App">
       <Router >
         <Navbar toggle={toggle} />
         <h1>Hi</h1>
