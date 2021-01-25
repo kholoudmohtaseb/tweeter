@@ -13,7 +13,7 @@ exports.addTweete = (req, res) => {
             console.log(err)
             return res.status(400).send('error')
         }
-        return res.status(200).send('created')
+        return res.status(200).send(savedTweete._id)
     })
 }
 

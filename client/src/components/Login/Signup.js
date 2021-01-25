@@ -8,6 +8,7 @@ function Signup(props) {
         email: "",
         password: "",
         username: "",
+        name: "",
         confirmPassword: "",
         successMessage: null
     })
@@ -24,6 +25,7 @@ function Signup(props) {
                 "email": state.email,
                 "password": state.password,
                 "username": state.username,
+                "name": state.name
             }
             axios.post('/signup', payload)
                 .then(function (response) {
@@ -74,6 +76,16 @@ function Signup(props) {
                             id="username"
                             placeholder="username"
                             value={state.username}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="form-group text-left">
+                        <label >name</label>
+                        <input
+                            className="form-control"
+                            id="name"
+                            placeholder="name"
+                            value={state.name}
                             onChange={handleChange}
                         />
                     </div>
