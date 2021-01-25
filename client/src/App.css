@@ -7,6 +7,14 @@ body{
   min-height:100%;
 
 } */
+.profilemenu{
+  transform: translateX(82%) translateY(60px);
+  
+@media screen and (max-width: 500px){
+  transform: translateX(42%) translateY(60px);
+  display:none
+}
+}
 
 /* .App {
   text-align: center;

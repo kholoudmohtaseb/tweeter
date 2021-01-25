@@ -56,7 +56,7 @@ letter-spacing: -0.035em;
 color: #333333;
 margin-top:25px;
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 700px){
     display:none;
 }
 `;
@@ -71,7 +71,7 @@ font-size: 13px;
 line-height: 16px;
 letter-spacing: -0.035em;
 color: #333333;
-@media screen and (max-width: 550px){
+@media screen and (max-width: 700px){
     display:none;
 }
 `;
@@ -111,9 +111,13 @@ align-items:center;
 list-style:none;
 text-align:center;
 margin-right:-2px;
+margin-top:20px;
+margin-bottom:20px;
 
 
-@media screen and (max-width: 550px){
+
+
+@media screen and (max-width: 700px){
     display:none;
 }
 `;

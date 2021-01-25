@@ -23,7 +23,7 @@ z-index:10;
 export const Thefooter = styled.div`{
     display: none;
      
-    @media screen and (max-width: 550px){
+    @media screen and (max-width: 700px){
         display:flex;
         position:fixed
     }
@@ -48,6 +48,8 @@ align-items:center;
 list-style:none;
 text-align:center;
 padding-inline-start: 0px;
+margin-top:20px;
+margin-bottom:20px;
 
 `;
 
