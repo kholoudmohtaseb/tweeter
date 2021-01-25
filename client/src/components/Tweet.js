@@ -3,7 +3,7 @@ import pic from "../components/avatar.png";
 
 const Tweet = (props) => {
   return (
-    <div class="ui card">
+    <div class="ui card" style={{padding:"1em 1em"}}>
       <div class="content">
         <img class="ui avatar image" src={pic} />
         Elliot
