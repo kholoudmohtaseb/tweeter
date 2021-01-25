@@ -57,7 +57,7 @@ function Login(props) {
         props.updateTitle('Register');
     }
     return (
-        <div className="login mt-2">
+        <div className="login-form">
             <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
                 <form>
                     <nav className="navbar navbar-dark bg-primary">

@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import FormPage from './components/forms/FormPage'
+import UserProfile from './components/UserProfile/Profile'
 
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -32,11 +34,11 @@ function App() {
     <div>
       <Router >
         <Navbar toggle={toggle} />
+        <UserProfile />
         <h1>Hi</h1>
-
         <p>mvhccfhv  hcthcj</p>
         <p>mvhccfhv  hcthcj</p>
-
+        <FormPage />
         <Footer />
       </Router>
       {console.log(user)}

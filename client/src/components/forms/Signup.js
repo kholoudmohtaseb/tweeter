@@ -66,7 +66,7 @@ function Signup(props) {
         }
     }
     return (
-        <div className="signup mt-2">
+        <div className="signup-form">
             <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
                 <form>
                     <nav className="navbar navbar-dark bg-primary">
