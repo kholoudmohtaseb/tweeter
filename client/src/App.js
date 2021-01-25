@@ -7,6 +7,8 @@ import Footer from './components/Footer'
 import LoginForm from './components/Login/Login'
 import SginUpForm from './components/Login/Signup'
 
+import Tweet from './components/Tweet';
+import 'semantic-ui-css/semantic.min.css'
 
 
 
@@ -32,9 +34,10 @@ function App() {
   })
 
   return (
-    <div>
+    <div className="App">
       <Router >
         <Navbar toggle={toggle} />
+        <Tweet></Tweet>
         <Switch>
           <Route path="/home" exact component={LoginForm} />
           <Route path="/bookmarks" exact component={SginUpForm} />
