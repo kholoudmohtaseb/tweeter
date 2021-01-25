@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 import { BrowserRouter as Router } from 'react-router-dom'
+import Tweet from './components/Tweet';
+import 'semantic-ui-css/semantic.min.css'
 
 
 
@@ -36,7 +38,8 @@ function App() {
 
         <p>mvhccfhv  hcthcj</p>
         <p>mvhccfhv  hcthcj</p>
-
+        <Tweet/>
+        
         <Footer />
       </Router>
       {console.log(user)}
