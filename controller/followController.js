@@ -1,8 +1,11 @@
 const UserModel = require('../model/userSchema')
 
+//follow user Controller 
 exports.follow = (req, res) => {
     var following = req.body.fusername
     var myusername = req.body.username
+
+    //find user, add the username (he want to follow) to his following array and update the DB
     UserModel.findOne({ username: myusername }, (err, data) => {
         if (err)
             return res.status(400).send('error')
@@ -14,6 +17,7 @@ exports.follow = (req, res) => {
                 if (err)
                     return res.status(400).send('error')
                 if (data) {
+                    //find username you want to follow, add the username to his followers array and update the DB
                     UserModel.findOne({ username: following }, (err, data) => {
                         if (err)
                             return res.status(400).send('error')
@@ -35,9 +39,12 @@ exports.follow = (req, res) => {
     })
 }
 
+
+//unfollow other users Controller
 exports.unfollow = (req, res) => {
     var following = req.body.fusername
     var myusername = req.body.username
+    //find user, remove the username (he want to follow) to his following array and update the DB
     UserModel.findOne({ username: myusername }, (err, data) => {
         if (err)
             return res.status(400).send('error')
@@ -49,6 +56,7 @@ exports.unfollow = (req, res) => {
                 if (err)
                     return res.status(400).send('error')
                 if (data) {
+                    //find username you want to follow, remove the username to his followers array and update the DB
                     UserModel.findOne({ username: following }, (err, data) => {
                         if (err)
                             return res.status(400).send('error')
@@ -72,7 +80,7 @@ exports.unfollow = (req, res) => {
 }
 
 
-
+//remove specific element from array
 function removeElement(array, elem) {
     var index = array.indexOf(elem);
     if (index > -1) {

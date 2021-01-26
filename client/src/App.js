@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import './App.css';
@@ -9,6 +9,10 @@ import SginUpForm from './components/Login/Signup'
 
 import 'semantic-ui-css/semantic.min.css'
 import Explore from './components/explore';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import TrendsHashtag from './components/TrendsHashtag';
+import Hashtag from './components/Hashtag';
 
 
 
@@ -17,31 +21,17 @@ function App() {
   const toggle = () => {
     setisOpen(!isOpen)
   }
-  const [user, setuser] = useState([
-    {
-      userName: '',
-
-    }
-  ])
-
-
-  useEffect(() => {
-    fetch('/test').then(res => {
-      if (res.ok) {
-        return res.json()
-      }
-    }).then(jsonRes => setuser(jsonRes))
-  })
 
   return (
     <div className="App">
       <Router >
         <Navbar toggle={toggle} />
         <Switch>
-          <Route path="/home" exact component={LoginForm} />
+          <Route path="/login" exact component={LoginForm} />
+          <Route path="/home" exact component={TrendsHashtag} />
+          <Route path="/hashtag" exact component={Hashtag} />
           <Route path="/bookmarks" exact component={SginUpForm} />
           <Route path="/explore" exact component={Explore} />
-
 
         </Switch>
         <Footer />
@@ -51,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

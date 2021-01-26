@@ -6,7 +6,7 @@ const Tweet = (props) => {
     <div class="ui two cards">
       <div class="ui card" style={{ padding: "1em 1em", width: '100%' }}>
         <div class="content">
-          <img class="ui avatar image" src={pic} />
+          <img class="ui avatar image" src={pic} alt="user img" />
           Elliot
           <div class="meta">14h</div>
         </div>
@@ -14,57 +14,28 @@ const Tweet = (props) => {
           Elyse is a copywriter working in New York.
         </div>
         <div class="image">
-          <img src={pic} />
+          <img src={pic} alt="tweet img" />
         </div>
 
-        {/* <div class="ui  divided  items ">
-        <div class="item">
-          <div class="ui tiny image">
-            <img src="/images/wireframe/image.png" />
-          </div>
-          <div class="middle aligned content">Content A</div>
-        </div>
-        <div class="item">
-          <div class="ui tiny image">
-            <img src="/images/wireframe/image.png" />
-          </div>
-          <div class="middle aligned content">Content B</div>
-        </div>
-        <div class="item">
-          <div class="ui tiny image">
-            <img src="/images/wireframe/image.png" />
-          </div>
-          <div class="middle aligned content">Content C</div>
-        </div>
-      </div> */}
-
-        <div class="ui horizontal segments" style={{ maxInlineSize: "100%" }}>
-          <div class="ui segment">
+        <div class="ui horizontal segments" >
+          <div class="ui segment" >
             <i class="comment icon">comment</i>
           </div>
           <div class="ui segment">
-            <i class="retweet icon">retweet</i>
+            <i class="retweet icon" >retweet</i>
           </div>
           <div class="ui segment">
-            <i class="heart outline like icon">liked</i>
+            <i class="heart outline like icon" >liked</i>
           </div>
           <div class="ui segment">
-            <i class="bookmark outline icon">saved</i>
+            <i class="bookmark outline icon" >saved</i>
           </div>
         </div>
-
-        {/* <div class="center aligned content">
-        <span class="right floated">
-          <i class="heart outline like icon"></i>
-          17 likes
-        </span>
-        <i class="comment icon"></i>3 comments
-      </div> */}
 
         <div class="extra content">
           <div class="ui large transparent left icon input">
             <i>
-              <img class="ui avatar image" src={pic} />
+              <img class="ui avatar image" src={pic} alt="user avatar img" />
             </i>
             <input type="text" placeholder="Add Comment..." />
           </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Nav, NavbarContainer, NavUser, NavMenu, UserName, UserImg, NavItem, NavLinks, NavLogo, Img, NavLogoH } from './navbarelements'
 import { IconContext } from 'react-icons/lib'
 import logo from './logo.svg';
@@ -10,8 +10,7 @@ const Navbar = ({ toggle }) => {
     const [anchorEl, setAnchorEl] = useState(false);
     const open = Boolean(anchorEl);
 
-
-    const handleMenu = (event) => {
+    const handleMenu = () => {
         setAnchorEl(!anchorEl);
     };
 
@@ -47,9 +46,7 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
 
                         </NavMenu>
-                        <NavUser
-                            onClick={handleMenu} aria-controls="menu-appbar"
-                        >
+                        <NavUser onClick={handleMenu} aria-controls="menu-appbar">
                             <UserImg src='https://cdnb.artstation.com/p/assets/images/images/015/193/525/20190113230710/smaller_square/kevin-schneider-miles-morales-print.jpg?1547442431' />
                             <UserName>Qamar Tweet</UserName>
                             <Menu className="profilemenu"
@@ -57,8 +54,7 @@ const Navbar = ({ toggle }) => {
                                 anchorEl={anchorEl}
                                 getContentAnchorEl={null}
                                 open={open}
-                                onClose={handleClose}
-                            >
+                                onClose={handleClose}>
                                 <MenuItem onClick={handleClose} >
                                     <Link to="home">Profile</Link>
                                 </MenuItem>

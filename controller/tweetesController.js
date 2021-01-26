@@ -1,8 +1,10 @@
 const TweeteModel = require('../model/tweetSchema')
 
+//create tweet controller
 exports.addTweete = (req, res) => {
     console.log(req.body)
 
+    //create tweet and save it
     var newTweete = new TweeteModel()
     newTweete.description = req.body.description
     newTweete.username = req.body.username
@@ -18,6 +20,7 @@ exports.addTweete = (req, res) => {
 }
 
 
+//get all tweet controller
 exports.gitAllTweetes = (req, res) => {
     TweeteModel.find({}, (err, tweetes) => {
         if (err)
@@ -25,4 +28,3 @@ exports.gitAllTweetes = (req, res) => {
         res.json(tweetes);
     });
 }
-

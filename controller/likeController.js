@@ -2,9 +2,12 @@ const TweetModel = require('../model/tweetSchema')
 const UserModel = require('../model/userSchema')
 
 
+//Like tweet controller
 exports.likeTweet = (req, res) => {
     var username = req.body.username
     var tweets = req.body.id
+
+    //find user, add the tweet id to his likes array and update the DB
     UserModel.findOne({ username: username }, (err, data) => {
         if (err)
             return res.status(400).send('error')
@@ -16,6 +19,7 @@ exports.likeTweet = (req, res) => {
                 if (err)
                     return res.status(400).send('error')
                 if (data) {
+                    //find the tweet, add the username to tweet likes array and update the DB
                     TweetModel.findOne({ _id: tweets }, (err, data) => {
                         if (err)
                             return res.status(400).send('error')
@@ -37,9 +41,12 @@ exports.likeTweet = (req, res) => {
     })
 }
 
+
+//remove Likes Controller
 exports.removelLike = (req, res) => {
     var username = req.body.username
     var tweets = req.body.id
+    //find user, remove the tweet id to his likes array and update the DB
     UserModel.findOne({ username: username }, (err, data) => {
         if (err)
             return res.status(400).send('error')
@@ -51,6 +58,7 @@ exports.removelLike = (req, res) => {
                 if (err)
                     return res.status(400).send('error')
                 if (data) {
+                    //find the tweet, remove the username to tweet likes array and update the DB
                     TweetModel.findOne({ _id: tweets }, (err, data) => {
                         if (err)
                             return res.status(400).send('error')
@@ -75,6 +83,7 @@ exports.removelLike = (req, res) => {
 
 
 
+//remove specific element from array
 function removeElement(array, elem) {
     var index = array.indexOf(elem);
     if (index > -1) {
