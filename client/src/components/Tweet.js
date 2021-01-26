@@ -3,8 +3,8 @@ import pic from "../components/avatar.png";
 
 const Tweet = (props) => {
   return (
-    <div class="ui two cards">
-      <div class="ui card" style={{ padding: "1em 1em" }}>
+    <div class="ui right floated">
+      <div class="ui right floated card" style={{ width: "25em",padding: "1em" }}>
         <div class="content">
           <img class="ui avatar image" src={pic} />
           Elliot
@@ -17,49 +17,20 @@ const Tweet = (props) => {
           <img src={pic} />
         </div>
 
-        {/* <div class="ui  divided  items ">
-        <div class="item">
-          <div class="ui tiny image">
-            <img src="/images/wireframe/image.png" />
-          </div>
-          <div class="middle aligned content">Content A</div>
-        </div>
-        <div class="item">
-          <div class="ui tiny image">
-            <img src="/images/wireframe/image.png" />
-          </div>
-          <div class="middle aligned content">Content B</div>
-        </div>
-        <div class="item">
-          <div class="ui tiny image">
-            <img src="/images/wireframe/image.png" />
-          </div>
-          <div class="middle aligned content">Content C</div>
-        </div>
-      </div> */}
-
-        <div class="ui horizontal segments" style={{ maxInlineSize: "100%" }}>
-          <div class="ui segment">
+        <div class="ui horizontal segments" >
+          <div class="ui segment" >
             <i class="comment icon">comment</i>
           </div>
           <div class="ui segment">
-            <i class="retweet icon">retweet</i>
+            <i class="retweet icon" >retweet</i>
           </div>
           <div class="ui segment">
-            <i class="heart outline like icon">liked</i>
+            <i class="heart outline like icon" >liked</i>
           </div>
           <div class="ui segment">
-            <i class="bookmark outline icon">saved</i>
+            <i class="bookmark outline icon" >saved</i>
           </div>
         </div>
-
-        {/* <div class="center aligned content">
-        <span class="right floated">
-          <i class="heart outline like icon"></i>
-          17 likes
-        </span>
-        <i class="comment icon"></i>3 comments
-      </div> */}
 
         <div class="extra content">
           <div class="ui large transparent left icon input">

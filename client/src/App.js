@@ -6,6 +6,10 @@ import Footer from './components/Footer'
 import { BrowserRouter as Router } from 'react-router-dom'
 import Tweet from './components/Tweet';
 import 'semantic-ui-css/semantic.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+import TrendsHashtag from './components/TrendsHashtag';
+import Hashtag from './components/Hashtag';
 
 
 
@@ -39,7 +43,7 @@ function App() {
         <p>mvhccfhv  hcthcj</p>
         <p>mvhccfhv  hcthcj</p>
         <Tweet/>
-        
+        <TrendsHashtag/>
         <Footer />
       </Router>
       {console.log(user)}
