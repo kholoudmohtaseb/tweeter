@@ -9,7 +9,7 @@ import 'semantic-ui-css/semantic.min.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TrendsHashtag from './components/TrendsHashtag';
-import Hashtag from './components/Hashtag';
+import WhoToFollow from './components/WhoToFollow';
 
 
 
@@ -44,6 +44,8 @@ function App() {
         <p>mvhccfhv  hcthcj</p>
         <Tweet/>
         <TrendsHashtag/>
+        <WhoToFollow/>
+
         <Footer />
       </Router>
       {console.log(user)}
