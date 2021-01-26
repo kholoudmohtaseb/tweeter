@@ -1,31 +1,33 @@
+const TweetModel = require('../model/tweetSchema')
 const UserModel = require('../model/userSchema')
 
-exports.follow = (req, res) => {
-    var following = req.body.fusername
-    var myusername = req.body.username
-    UserModel.findOne({ username: myusername }, (err, data) => {
+
+exports.likeTweet = (req, res) => {
+    var username = req.body.username
+    var tweets = req.body.id
+    UserModel.findOne({ username: username }, (err, data) => {
         if (err)
             return res.status(400).send('error')
         if (!data)
             return res.status(401).send('no user Found')
         else {
-            data.following.push(following)
-            UserModel.update({ username: myusername }, { following: data.following }, (err, data) => {
+            data.likes.push(tweets)
+            UserModel.updateOne({ username: username }, { likes: data.likes }, (err, data) => {
                 if (err)
                     return res.status(400).send('error')
                 if (data) {
-                    UserModel.findOne({ username: following }, (err, data) => {
+                    TweetModel.findOne({ _id: tweets }, (err, data) => {
                         if (err)
                             return res.status(400).send('error')
                         if (!data)
                             return res.status(401).send('user not Found')
                         else {
-                            data.followers.push(myusername)
-                            UserModel.update({ username: following }, { followers: data.followers }, (err, data) => {
+                            data.likes.push(username)
+                            TweetModel.updateOne({ _id: tweets }, { likes: data.likes }, (err, data) => {
                                 if (err)
                                     return res.status(400).send('error')
                                 if (data)
-                                    return res.status(200).send('followed')
+                                    return res.status(200).send('add to Likes')
                             })
                         }
                     })
@@ -35,32 +37,32 @@ exports.follow = (req, res) => {
     })
 }
 
-exports.unfollow = (req, res) => {
-    var following = req.body.fusername
-    var myusername = req.body.username
-    UserModel.findOne({ username: myusername }, (err, data) => {
+exports.removelLike = (req, res) => {
+    var username = req.body.username
+    var tweets = req.body.id
+    UserModel.findOne({ username: username }, (err, data) => {
         if (err)
             return res.status(400).send('error')
         if (!data)
             return res.status(401).send('no user Found')
         else {
-            removeElement(data.following, following)
-            UserModel.update({ username: myusername }, { following: data.following }, (err, data) => {
+            removeElement(data.likes, tweets)
+            UserModel.updateOne({ username: username }, { likes: data.likes }, (err, data) => {
                 if (err)
                     return res.status(400).send('error')
                 if (data) {
-                    UserModel.findOne({ username: following }, (err, data) => {
+                    TweetModel.findOne({ _id: tweets }, (err, data) => {
                         if (err)
                             return res.status(400).send('error')
                         if (!data)
                             return res.status(401).send('user not Found')
                         else {
-                            removeElement(data.followers, myusername)
-                            UserModel.update({ username: following }, { followers: data.followers }, (err, data) => {
+                            removeElement(data.likes, username)
+                            TweetModel.updateOne({ _id: tweets }, { likes: data.likes }, (err, data) => {
                                 if (err)
                                     return res.status(400).send('error')
                                 if (data) {
-                                    return res.status(200).send("unfollowed")
+                                    return res.status(200).send("remove from Likes")
                                 }
                             })
                         }

@@ -18,21 +18,11 @@ const Navbar = ({ toggle }) => {
     const handleClose = () => {
         setAnchorEl(anchorEl);
     };
-    const [scrollnav, setScrollNav] = useState(false)
-    const changeNav = () => {
-        if (window.scrollY >= 80)
-            setScrollNav(true)
-        else
-            setScrollNav(false)
 
-    }
-    useEffect(() => {
-        window.addEventListener('scroll', changeNav);
-    }, [])
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
-                <Nav scrollnav={scrollnav}>
+                <Nav>
                     <NavbarContainer>
                         <NavLogo to='home'>
                             <Img src={logo} />

@@ -57,14 +57,14 @@ const userSchema = new Schema({
     //     type: Schema.Types.ObjectId,
     //     ref: 'Tweet'
     // }],
-    // likes: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Tweet'
-    // }],
-    // bookmarks: [{
-    //     type: Schema.Types.ObjectId,
-    //     ref: 'Tweet'
-    // }],
+    likes: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Tweet'
+    }],
+    bookmarks: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Tweet'
+    }],
 }, { timestamps: true })
 
 const User = mongoose.model('User', userSchema)

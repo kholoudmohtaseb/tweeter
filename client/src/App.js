@@ -7,8 +7,8 @@ import Footer from './components/Footer'
 import LoginForm from './components/Login/Login'
 import SginUpForm from './components/Login/Signup'
 
-import Tweet from './components/Tweet';
 import 'semantic-ui-css/semantic.min.css'
+import Explore from './components/explore';
 
 
 
@@ -37,23 +37,16 @@ function App() {
     <div className="App">
       <Router >
         <Navbar toggle={toggle} />
-        <Tweet></Tweet>
         <Switch>
           <Route path="/home" exact component={LoginForm} />
           <Route path="/bookmarks" exact component={SginUpForm} />
+          <Route path="/explore" exact component={Explore} />
+
 
         </Switch>
         <Footer />
       </Router>
 
-      {/* {user.map(user => {
-        return (
-          <div>
-            <h1>{user.userName}</h1>
-
-          </div>
-        )
-      })} */}
     </div>
   );
 }

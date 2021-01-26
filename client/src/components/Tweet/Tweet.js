@@ -1,10 +1,10 @@
 import React from "react";
-import pic from "../components/avatar.png";
+import pic from "./avatar.png";
 
 const Tweet = (props) => {
   return (
     <div class="ui two cards">
-      <div class="ui card" style={{ padding: "1em 1em" }}>
+      <div class="ui card" style={{ padding: "1em 1em", width: '100%' }}>
         <div class="content">
           <img class="ui avatar image" src={pic} />
           Elliot
