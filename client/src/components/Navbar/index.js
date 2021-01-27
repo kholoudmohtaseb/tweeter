@@ -48,7 +48,7 @@ const Navbar = ({ toggle }) => {
                         </NavMenu>
                         <NavUser onClick={handleMenu} aria-controls="menu-appbar">
                             <UserImg src='https://cdnb.artstation.com/p/assets/images/images/015/193/525/20190113230710/smaller_square/kevin-schneider-miles-morales-print.jpg?1547442431' />
-                            <UserName>Qamar Tweet</UserName>
+                            <UserName >Qamar Tweet</UserName>
                             <Menu className="profilemenu"
                                 id="menu-appbar"
                                 anchorEl={anchorEl}
@@ -56,7 +56,7 @@ const Navbar = ({ toggle }) => {
                                 open={open}
                                 onClose={handleClose}>
                                 <MenuItem onClick={handleClose} >
-                                    <Link to="home">Profile</Link>
+                                    <Link to="Profile">Profile</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose} >My account</MenuItem>
                             </Menu>

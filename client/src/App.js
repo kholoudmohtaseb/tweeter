@@ -32,7 +32,7 @@ function App() {
         <Switch>
           <Route path="/login" exact component={LoginForm} />
           <Route path="/home" exact component={TrendsHashtag} />
-          <Route path="/hashtag" exact component={Hashtag} />
+          {/* <Route path="/hashtag" exact component={Hashtag} /> */}
           <Route path="/bookmarks" exact component={SginUpForm} />
           <Route path="/explore" exact component={Explore} />
           <Route path="/profile" exact component={UserProfile} />
