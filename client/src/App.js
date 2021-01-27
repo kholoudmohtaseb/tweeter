@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import './App.css';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import LoginForm from './components/Login/Login'
+import SginUpForm from './components/Login/Signup'
 
-import { BrowserRouter as Router } from 'react-router-dom'
-import Tweet from './components/Tweet';
 import 'semantic-ui-css/semantic.min.css'
+import Explore from './components/explore';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TrendsHashtag from './components/TrendsHashtag';
@@ -18,46 +21,24 @@ function App() {
   const toggle = () => {
     setisOpen(!isOpen)
   }
-  const [user, setuser] = useState([
-    {
-      userName: '',
-
-    }
-  ])
-
-
-  useEffect(() => {
-    fetch('/test').then(res => {
-      if (res.ok) {
-        return res.json()
-      }
-    }).then(jsonRes => setuser(jsonRes))
-  })
 
   return (
     <div className="App">
       <Router >
         <Navbar toggle={toggle} />
-        <h1>Hi</h1>
+        <Switch>
+          <Route path="/login" exact component={LoginForm} />
+          <Route path="/home" exact component={TrendsHashtag} />
+          <Route path="/hashtag" exact component={Hashtag} />
+          <Route path="/bookmarks" exact component={SginUpForm} />
+          <Route path="/explore" exact component={Explore} />
 
-        <p>mvhccfhv  hcthcj</p>
-        <p>mvhccfhv  hcthcj</p>
-        <Tweet/>
-        <TrendsHashtag/>
+        </Switch>
         <Footer />
       </Router>
-      {console.log(user)}
 
-      {/* {user.map(user => {
-        return (
-          <div>
-            <h1>{user.userName}</h1>
-
-          </div>
-        )
-      })} */}
     </div>
   );
 }
 
-export default App;
+export default App

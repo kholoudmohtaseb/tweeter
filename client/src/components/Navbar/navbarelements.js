@@ -27,6 +27,8 @@ z-index:1;
 width:100%;
 padding:0 18px;
 max-width:1200px;
+position:fixed;
+
 `;
 export const NavLogo = styled(Link)`
 font-family: Poppins;
@@ -54,9 +56,9 @@ font-size: 20px;
 line-height: 27px;
 letter-spacing: -0.035em;
 color: #333333;
-margin-top:25px;
+margin-top:10px;
 
-@media screen and (max-width: 780px){
+@media screen and (max-width: 700px){
     display:none;
 }
 `;
@@ -71,7 +73,8 @@ font-size: 13px;
 line-height: 16px;
 letter-spacing: -0.035em;
 color: #333333;
-@media screen and (max-width: 780px){
+padding-bottom:25px;
+@media screen and (max-width: 700px){
     display:none;
 }
 `;
@@ -111,9 +114,13 @@ align-items:center;
 list-style:none;
 text-align:center;
 margin-right:-2px;
+margin-top:20px;
+margin-bottom:20px;
 
 
-@media screen and (max-width: 780px){
+
+
+@media screen and (max-width: 700px){
     display:none;
 }
 `;
@@ -127,7 +134,7 @@ color: #828282;
 display:flex;
 align-items:center;
 text-decoration:none;
-padding:0 2.6rem;
+padding:0 4vw 0;
 height:100%;
 cursor:pointer;
 
