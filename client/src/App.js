@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import FormPage from './components/forms/FormPage'
+import UserProfile from './components/UserProfile/Profile'
+import Follow from './components/Follow';
 import LoginForm from './components/Login/Login'
 import SginUpForm from './components/Login/Signup'
 
@@ -32,6 +35,7 @@ function App() {
           <Route path="/hashtag" exact component={Hashtag} />
           <Route path="/bookmarks" exact component={SginUpForm} />
           <Route path="/explore" exact component={Explore} />
+          <Route path="/profile" exact component={UserProfile} />
 
         </Switch>
         <Footer />
