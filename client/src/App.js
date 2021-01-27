@@ -15,7 +15,7 @@ import Explore from './components/explore';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TrendsHashtag from './components/TrendsHashtag';
-import Hashtag from './components/Hashtag';
+import WhoToFollow from './components/WhoToFollow';
 
 
 

@@ -3,8 +3,7 @@ import pic from "./avatar.png";
 
 const Tweet = (props) => {
   return (
-    <div class="ui two cards">
-      <div class="ui card" style={{ padding: "1em 1em", width: '100%' }}>
+      <div class="ui card" style={{ width: "25em",padding: "1em" }}>
         <div class="content">
           <img class="ui avatar image" src={pic} alt="user img" />
           Elliot
@@ -41,7 +40,6 @@ const Tweet = (props) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 export default Tweet;
