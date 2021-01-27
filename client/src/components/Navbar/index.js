@@ -23,13 +23,13 @@ const Navbar = ({ toggle }) => {
             <IconContext.Provider value={{ color: '#fff' }}>
                 <Nav>
                     <NavbarContainer>
-                        <NavLogo to='home'>
+                        <NavLogo to='Home'>
                             <Img src={logo} />
                             <NavLogoH>Tweeter</NavLogoH>
                         </NavLogo>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to='home' smooth={true}
+                                <NavLinks to='Home' smooth={true}
                                     duration={500}
                                     spy={true}
                                     exact="true"

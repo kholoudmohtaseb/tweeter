@@ -17,6 +17,9 @@ import Explore from './components/explore';
 import TrendsHashtag from './components/TrendsHashtag';
 import WhoToFollow from './components/WhoToFollow';
 
+import Home from "./components/Home"
+import Bookmarks from "./components/Bookmarks"
+
 
 
 function App() {
@@ -31,9 +34,9 @@ function App() {
         <Navbar toggle={toggle} />
         <Switch>
           <Route path="/login" exact component={LoginForm} />
-          <Route path="/home" exact component={TrendsHashtag} />
+          <Route path="/home" exact component={Home} />
           {/* <Route path="/hashtag" exact component={Hashtag} /> */}
-          <Route path="/bookmarks" exact component={SginUpForm} />
+          <Route path="/bookmarks" exact component={Bookmarks} />
           <Route path="/explore" exact component={Explore} />
           <Route path="/profile" exact component={UserProfile} />
 

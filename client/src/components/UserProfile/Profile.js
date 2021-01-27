@@ -138,13 +138,13 @@ function UserProfile(props) {
                     </ul>
                 </div>
             </section>
-            {/* <Mainbar> */}
-            {/* <Tweetbar> */}
             <div className="tweets-bar" style={{
-                position: 'absolute', left: '50%', top: '255%',
+                position: 'absolute', left: '64%', top: '165%',
                 transform: 'translate(-50%, -50%)'
             }}
             >
+                {/* <Mainbar> */}
+                {/* <Tweetbar> */}
                 <Tweet></Tweet>
                 <Tweet></Tweet>
                 <Tweet></Tweet>
