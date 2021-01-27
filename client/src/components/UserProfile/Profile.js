@@ -6,6 +6,20 @@ import './Profile.css'
 
 import ReactTwitterFollowButton from 'react-twitter-follow-button';
 
+import Tweet from '../Tweet/Tweet'
+// import {
+//     ExploreContainer,
+//     Sidebar,
+//     Mainbar,
+//     Searchbar,
+//     Tweetbar,
+//     ExplorWrapper,
+//     SearchFilter,
+//     SearchIcon,
+//     SearchField,
+//     SearchBtn
+// } from '../explore/exploreelements'
+
 
 function UserProfile(props) {
 
@@ -68,7 +82,7 @@ function UserProfile(props) {
                                             </div>
                                         </div>
                                         <li class="twPc-ArrangeSizeFit">
-                                            <a href="https://twitter.com/mertskaplan/following" title="885 Following">
+                                            <a href="https://twitter.com/" title="885 Following">
                                                 <span class="twPc-StatValue">885
                                                         <span class="twPc-StatLabel twPc-block">following</span>
                                                 </span>
@@ -124,6 +138,19 @@ function UserProfile(props) {
                     </ul>
                 </div>
             </section>
+            <div className="tweets-bar" style={{
+                position: 'absolute', left: '64%', top: '165%',
+                transform: 'translate(-50%, -50%)'
+            }}
+            >
+                {/* <Mainbar> */}
+                {/* <Tweetbar> */}
+                <Tweet></Tweet>
+                <Tweet></Tweet>
+                <Tweet></Tweet>
+                {/* </Tweetbar> */}
+                {/* </Mainbar> */}
+            </div>
         </div>
     )
 }
