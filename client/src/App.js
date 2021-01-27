@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import FormPage from './components/forms/FormPage'
 import UserProfile from './components/UserProfile/Profile'
+import Follow from './components/Follow';
 
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -39,6 +40,7 @@ function App() {
         <p>mvhccfhv  hcthcj</p>
         <p>mvhccfhv  hcthcj</p>
         <FormPage />
+        <Follow />
         <Footer />
       </Router>
       {console.log(user)}

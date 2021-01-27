@@ -7,7 +7,47 @@ import './Profile.css'
 import ReactTwitterFollowButton from 'react-twitter-follow-button';
 
 
-function UserProfile() {
+function UserProfile(props) {
+
+    // const { state, actions } = useContext(StoreContext)
+    // const [activeTab, setActiveTab] = useState('Tweets')
+    // const [editName, setName] = useState('')
+    // const [editBio, setBio] = useState('')
+    // const [editLocation, setLocation] = useState('')
+    // const [modalOpen, setModalOpen] = useState(false)
+    // const [banner, setBanner] = useState('')
+    // const [avatar, setAvatar] = useState('')
+    // const [saved, setSaved] = useState(false)
+    // const [memOpen, setMemOpen] = useState(false)
+    // const [tab, setTab] = useState('Followers')   
+    // const [loadingAvatar, setLoadingAvatar] = useState(false)
+    // const [loadingBanner, setLoadingBanner] = useState(false)
+    // const [styleBody, setStyleBody] = useState(false)
+    // const {account, user, session} = state
+    // const userParam = props.match.params.username
+
+
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    //     actions.getUser(props.match.params.username)
+    //     //preventing edit modal from apprearing after clicking a user on memOpen
+    //     setMemOpen(false)
+    //     setModalOpen(false)
+    // }, [props.match.params.username])
+
+
+    // const editProfile = () => {
+    //     let values = {
+    //         name: editName,
+    //         description: editBio,
+    //         location: editLocation,
+    //         profileImg: avatar,
+    //         banner: banner
+    //     }
+    //     actions.updateUser(values)
+    //     setSaved(true)
+    //     toggleModal()
+    // }
     return (
         <div className="profile-page">
             <div className="page-header header-filter" >
@@ -15,18 +55,13 @@ function UserProfile() {
             </div>
             <div className="main main-raised">
 
-
-
-
                 <div className="profile-content">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-6 ml-auto mr-auto">
 
-
                                 <div class="twPc-divUser">
                                     <ul class="twPc-Arrange">
-
                                         <div class="twPc-divStats">
                                             <div class="twPc-divName">
                                                 <a href="https://twitter.com">Name </a>
@@ -52,7 +87,6 @@ function UserProfile() {
                                         {/* <!-- Twitter Button > */}
                                         <a href="https://twitter.com/mertskaplan" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false" data-dnt="true"><ReactTwitterFollowButton /></a>
                                     </div>
-
                                 </div>
                                 <div className="profile">
                                     <div className="avatar">
@@ -61,7 +95,6 @@ function UserProfile() {
                                             <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
