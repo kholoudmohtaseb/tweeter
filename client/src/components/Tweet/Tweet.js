@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pic from "./avatar.png";
+import tweets from "../../apis/tweets";
 
 const Tweet = (props) => {
+  const [tweetInfo, setTweetInfo] = useState([]);
+
+  const fetchTweets = async () => {
+    const response = await tweets.get("/gitalltweete/");
+    console.log("-------------------", response.data);
+    setTweetInfo(response.data);
+  };
+  useEffect(() => {
+    fetchTweets();
+  }, []);
   return (
     <div class="ui card" style={{ width: "600px", height: '300px', marginBottom: '150px', padding: '1px' }}>
       <div class="content">
