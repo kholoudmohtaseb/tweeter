@@ -24,7 +24,7 @@ const WhoToFollow = (props) => {
           Who to follow
         </div>
         <PeopleToFollow />
-        <PeopleToFollow />
+        {/* <PeopleToFollow /> */}
       </div>
     </div>
   );
