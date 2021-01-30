@@ -36,7 +36,7 @@ function Bookmarks(props) {
                 </section>
             </div>
             <div style={{
-                position: 'absolute', left: '60%', top: '90%',
+                position: 'absolute', left: '60%', top: '123%',
                 transform: 'translate(-50%, -50%)', backgroundColor: '#FFF'
             }}>
                 {/* <Mainbar> */}

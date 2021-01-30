@@ -139,7 +139,7 @@ function UserProfile(props) {
                 </div>
             </section>
             <div className="tweets-bar" style={{
-                position: 'absolute', left: '64%', top: '165%',
+                position: 'absolute', left: '64%', top: '200%',
                 transform: 'translate(-50%, -50%)'
             }}
             >
