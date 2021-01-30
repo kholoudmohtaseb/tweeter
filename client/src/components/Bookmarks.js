@@ -36,14 +36,12 @@ function Bookmarks(props) {
                 </section>
             </div>
             <div style={{
-                position: 'absolute', left: '60%', top: '123%',
+                position: 'absolute', left: '60%', top: '218%',
                 transform: 'translate(-50%, -50%)', backgroundColor: '#FFF'
             }}>
                 {/* <Mainbar> */}
                 {/* <Tweetbar> */}
-                <Tweet></Tweet>
-                <Tweet></Tweet>
-                <Tweet></Tweet>
+                <Tweet/>
                 {/* </Tweetbar> */}
                 {/* </Mainbar> */}
             </div>
