@@ -20,7 +20,7 @@ function FormPage() {
             {/* <Header title={title} /> */}
             <Login />
             <Signup />
-            <Home />
+            {/* <Home /> */}
         </div>
     )
 }
