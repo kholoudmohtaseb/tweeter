@@ -28,14 +28,13 @@ function Home(props) {
                 <WhoToFollow />
             </div>
             <div style={{
-                position: 'absolute', left: '40%', top: '160%',
+                position: 'absolute', left: '45%', top: '250%',
                 transform: 'translate(-50%, -50%)', backgroundColor: '#FFF'
             }}>
                 {/* <Mainbar> */}
                 {/* <Tweetbar> */}
-                <Tweet></Tweet>
-                <Tweet></Tweet>
-                <Tweet></Tweet>
+                <Tweet/>
+
                 {/* </Tweetbar> */}
                 {/* </Mainbar> */}
             </div>
