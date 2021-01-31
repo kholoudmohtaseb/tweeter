@@ -17,10 +17,6 @@ const Navbar = ({ toggle }) => {
     const handleClose = () => {
         setAnchorEl(anchorEl);
     };
-     const clearCookie = (req) => {
-         
-         console.log("cookies cleared ",document.cookie)
-          };
 
     const LogOut = () => {
         localStorage.removeItem('token')

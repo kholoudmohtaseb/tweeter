@@ -28,7 +28,7 @@ width:100%;
 padding:0 18px;
 max-width:1200px;
 position:fixed;
-
+background:#FFFFFF;
 `;
 export const NavLogo = styled(Link)`
 font-family: Poppins;
