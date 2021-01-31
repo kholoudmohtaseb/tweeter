@@ -12,8 +12,7 @@ function Login(props) {
         value: '',
         alert: false
     })
-    var alert = false
-    var value = ''
+
     const handleChange = (e) => {
         const { id, value } = e.target
         setState(prevState => ({
