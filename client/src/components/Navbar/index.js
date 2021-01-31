@@ -24,6 +24,12 @@ const Navbar = ({ toggle }) => {
         setAnchorEl(anchorEl);
     };
 
+    const LogOut = () => {
+        localStorage.removeItem('token')
+        setAnchorEl(anchorEl);
+        window.location.href = '/login'
+    };
+
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
@@ -62,11 +68,11 @@ const Navbar = ({ toggle }) => {
                                 getContentAnchorEl={null}
                                 open={open}
                                 onClose={handleClose}>
+
                                 <MenuItem onClick={handleClose} ><Link to="Profile"> <AccountCircleRoundedIcon /> My Profile</Link></MenuItem>
                                 <MenuItem onClick={handleClose} ><Link to="WhoToFollow"> <GroupRoundedIcon /> Group Chat</Link></MenuItem>
                                 <MenuItem onClick={handleClose} ><Link to="Signup"> <SettingsRoundedIcon /> Settings</Link></MenuItem>
-                                <div><MenuItem onClick={handleClose} ><Link to="Login"> <ExitToAppRoundedIcon /> Logout</Link></MenuItem></div>
-                            </Menu>
+                                <div><MenuItem onClick={LogOut} ><Link to="Login"> <ExitToAppRoundedIcon /> Logout</Link></MenuItem></div>
                         </NavUser>
 
                     </NavbarContainer>

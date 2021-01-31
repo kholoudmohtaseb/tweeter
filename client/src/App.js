@@ -19,6 +19,7 @@ import WhoToFollow from './components/WhoToFollow';
 
 import Home from "./components/Home"
 import Bookmarks from "./components/Bookmarks"
+import Signup from './components/Login/Signup';
 
 
 
@@ -27,14 +28,21 @@ function App() {
   const toggle = () => {
     setisOpen(!isOpen)
   }
+  var nav = <div></div>
 
+  if (localStorage.getItem('token')) {
+    nav = <Navbar toggle={toggle} />
+  }
   return (
+
     <div className="App">
       <Router >
-        <Navbar toggle={toggle} />
+        {nav}
         <Switch>
           <Route path="/signup" exact component={SginUpForm} />
           <Route path="/login" exact component={LoginForm} />
+          <Route path="/signup" exact component={Signup} />
+
           <Route path="/home" exact component={Home} />
           {/* <Route path="/hashtag" exact component={Hashtag} /> */}
           <Route path="/bookmarks" exact component={Bookmarks} />
