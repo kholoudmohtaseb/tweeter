@@ -13,7 +13,7 @@ exports.signUpUser = async (req, res) => {
         if (err) {
             console.log(err)
             //check if there is a user sign up with an already used username
-            return res.status(401).send('used username')
+            return res.status(201).send('used username')
         }
         if (!user) {
             //create user
@@ -25,17 +25,17 @@ exports.signUpUser = async (req, res) => {
             newuser.save((err, saveduser) => {
                 if (err) {
                     console.log(err)
-                    return res.status(400).send('error')
+                    return res.status(201).send('error')
                 }
                 //create token for user
                 var token = jwt.sign({ _id: saveduser._id }, '12kkQlm')
                 res.cookie('authToken', token)
-                return res.status(200).send('created')
+                return res.status(200).send(saveduser)
             })
         }
         else
             //check if there is a user sign up with an already used email
-            return res.status(406).send('email used')
+            return res.status(206).send('email used')
     })
 }
 
@@ -51,19 +51,19 @@ exports.loginUser = (req, res) => {
         //check user email
         if (!user) {
             console.log('user not found')
-            return res.status(404).send('not found user')
+            return res.status(204).send('not found user')
         }
         else {
             //check user password
             const vaildPass = await bcrypt.compare(req.body.password, user.password)
             if (!vaildPass) {
-                res.status(400).send('invalid Password')
+                res.status(203).send('invalid Password')
             }
             else {
                 //create token for the user
                 var token = jwt.sign({ _id: user._id }, '12kkQlm')
                 res.cookie('authToken', token)
-                return res.status(200).send(token)
+                return res.status(200).send(user)
             }
         }
     })
