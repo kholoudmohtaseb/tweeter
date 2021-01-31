@@ -8,9 +8,9 @@ import PostTweets from "./PostTweets"
 
 function Home(props) {
     return (
-        <div>
+        <div style={{ backgroundColor: '#FAFAFB' }}>
             <div style={{
-                position: 'absolute', left: '40%', top: '22%',
+                position: 'absolute', left: '40%', top: '20%',
                 transform: 'translate(-50%, -50%)', backgroundColor: '#FFF'
             }}>
                 <PostTweets />
@@ -28,17 +28,17 @@ function Home(props) {
                 <WhoToFollow />
             </div>
             <div style={{
-                position: 'absolute', left: '45%', top: '250%',
+                position: 'absolute', left: '40%', top: '500%',
                 transform: 'translate(-50%, -50%)', backgroundColor: '#FFF'
             }}>
                 {/* <Mainbar> */}
                 {/* <Tweetbar> */}
-                <Tweet/>
+                <Tweet />
 
                 {/* </Tweetbar> */}
                 {/* </Mainbar> */}
             </div>
-        </div>
+        </div >
     )
 }
 

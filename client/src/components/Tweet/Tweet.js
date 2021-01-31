@@ -15,21 +15,21 @@ const Tweet = (props) => {
     fetchTweets();
   }, []);
   return (
-    <div className="ui cards">
+    <div className="ui cards" style={{ width: "615px" }}>
       {tweetInfo.map((tweet) => {
-          if (!tweet) {
-            return <div>Loading..</div>;
-          } else {
-            return (
-              <TweetCard
-                username={tweet.username}
-                createdAt={tweet.createdAt}
-                description={tweet.description}
-                images={tweet.images}
-              />
-            );
-          }
-        })}
+        if (!tweet) {
+          return <div>Loading..</div>;
+        } else {
+          return (
+            <TweetCard
+              username={tweet.username}
+              createdAt={tweet.createdAt}
+              description={tweet.description}
+              images={tweet.images}
+            />
+          );
+        }
+      })}
     </div>
   );
 };
