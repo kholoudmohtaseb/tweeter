@@ -17,6 +17,10 @@ const Navbar = ({ toggle }) => {
     const handleClose = () => {
         setAnchorEl(anchorEl);
     };
+     const clearCookie = (req) => {
+         
+         console.log("cookies cleared ",document.cookie)
+          };
 
     return (
         <>
@@ -58,7 +62,7 @@ const Navbar = ({ toggle }) => {
                                 <MenuItem onClick={handleClose} >
                                     <Link to="Profile">Profile</Link>
                                 </MenuItem>
-                                <MenuItem onClick={handleClose} ><Link to="Login">Logout</Link></MenuItem>
+                                <MenuItem onClick={handleClose,clearCookie} ><Link to="Login">Logout</Link></MenuItem>
                             </Menu>
                         </NavUser>
 

@@ -3,11 +3,11 @@ import pic from "./avatar.png";
 
 const TweetCard = (props) => {
     return (
-        <div class="ui card" style={{ width: "600px", height: '300px', marginBottom: '150px', padding: '1px' }}>
+        <div class="ui card" style={{ width: "600px", height: '300px', marginBottom: '10em', padding: '1px' }}>
       <div class="content">
         <img class="ui avatar image" src={pic} alt="user img" />
           {props.username}
-          <div class="meta">{props.createdAt}</div>
+          <div class="meta">{props.createdAt.split('T')[1].split('.')[0]}</div>
       </div>
       <div class="description">
         {props.description}

@@ -15,7 +15,7 @@ const Tweet = (props) => {
     fetchTweets();
   }, []);
   return (
-    <div className="ui cards">
+    <div className="ui three vartical raised cards" >
       {tweetInfo.map((tweet) => {
           if (!tweet) {
             return <div>Loading..</div>;
@@ -26,6 +26,7 @@ const Tweet = (props) => {
                 createdAt={tweet.createdAt}
                 description={tweet.description}
                 images={tweet.images}
+                key={tweet.name}
               />
             );
           }

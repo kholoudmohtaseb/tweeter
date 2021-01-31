@@ -27,7 +27,7 @@ function Login(props) {
             .then(function (response) {
                 if (response.status === 200) {
                     console.log('hello')
-
+                    console.log(response)
                 }
 
             })
