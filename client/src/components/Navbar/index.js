@@ -22,6 +22,12 @@ const Navbar = ({ toggle }) => {
          console.log("cookies cleared ",document.cookie)
           };
 
+    const LogOut = () => {
+        localStorage.removeItem('token')
+        setAnchorEl(anchorEl);
+        window.location.href = '/login'
+    };
+
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
@@ -62,7 +68,7 @@ const Navbar = ({ toggle }) => {
                                 <MenuItem onClick={handleClose} >
                                     <Link to="Profile">Profile</Link>
                                 </MenuItem>
-                                <MenuItem onClick={handleClose,clearCookie} ><Link to="Login">Logout</Link></MenuItem>
+                                <MenuItem onClick={LogOut} ><Link>Logout</Link></MenuItem>
                             </Menu>
                         </NavUser>
 
