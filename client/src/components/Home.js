@@ -1,10 +1,10 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import Tweet from './Tweet/Tweet'
-import TrendsHashtag from "./TrendsHashtag"
-import WhoToFollow from "./WhoToFollow"
-import PostTweets from "./PostTweets"
+import Tweet from "./Tweet/Tweet";
+import TrendsHashtag from "./TrendsHashtag";
+import WhoToFollow from "./WhoToFollow";
+import PostTweets from "./PostTweets";
 
 function Home(props) {
     return (

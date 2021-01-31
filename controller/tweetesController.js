@@ -7,7 +7,8 @@ exports.addTweete = (req, res) => {
     //create tweet and save it
     var newTweete = new TweeteModel()
     newTweete.description = req.body.description
-    newTweete.username = req.body.username
+    // newTweete.username = req.body.username
+    newTweete.username = 'raminawahda'
     newTweete.parent = req.body.parent
 
     newTweete.save((err, savedTweete) => {
