@@ -30,7 +30,7 @@ function App() {
   }
   var nav = <div></div>
 
-  if (localStorage.getItem('token') === "true") {
+  if (localStorage.getItem('token')) {
     nav = <Navbar toggle={toggle} />
   }
   return (

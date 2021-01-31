@@ -33,7 +33,7 @@ function Login(props) {
                 console.log(response.data)
                 if (response.status === 200) {
                     console.log(response)
-                    localStorage.setItem('token', 'true')
+                    localStorage.setItem('token', response.data)
                     window.location.href = '/home'
                 }
                 if (response.status === 203) {

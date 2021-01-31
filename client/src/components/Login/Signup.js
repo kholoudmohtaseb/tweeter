@@ -35,7 +35,7 @@ function Signup(props) {
                 .then(function (response) {
                     if (response.status === 200) {
                         console.log('user created')
-                        localStorage.setItem('token', 'true')
+                        localStorage.setItem('token', response.data)
                         window.location.href = '/home'
                     }
                     else if (response.status === 201) {
