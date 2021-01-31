@@ -33,6 +33,7 @@ function App() {
       <Router >
         <Navbar toggle={toggle} />
         <Switch>
+          <Route path="/signup" exact component={SginUpForm} />
           <Route path="/login" exact component={LoginForm} />
           <Route path="/home" exact component={Home} />
           {/* <Route path="/hashtag" exact component={Hashtag} /> */}

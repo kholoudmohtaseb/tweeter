@@ -28,7 +28,7 @@ const Explore = () => {
                         <Searchbar>
                             <SearchIcon className="fa fa-search" aria-hidden="true" ></SearchIcon>
                             <SearchField type="text" placeholder="Search" ></SearchField>
-                            <SearchBtn>Search</SearchBtn>
+                            <SearchBtn >Search</SearchBtn>
                         </Searchbar>
 
                         <Tweetbar>
