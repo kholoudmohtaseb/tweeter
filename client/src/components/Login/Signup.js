@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Signup.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Alert from "@material-ui/lab/Alert";
 
 function Signup(props) {
     const [state, setState] = useState({
@@ -10,7 +11,10 @@ function Signup(props) {
         username: "",
         name: "",
         confirmPassword: "",
-        successMessage: null
+        successMessage: null,
+        value: '',
+        alert: false
+
     })
     const handleChange = (e) => {
         const { id, value } = e.target
@@ -20,7 +24,7 @@ function Signup(props) {
         }))
     }
     const sendDetailsToServer = () => {
-        if (state.email.length && state.password.length) {
+        if (state.email && state.password) {
             const payload = {
                 "email": state.email,
                 "password": state.password,
@@ -31,7 +35,22 @@ function Signup(props) {
                 .then(function (response) {
                     if (response.status === 200) {
                         console.log('user created')
+                        localStorage.setItem('token', 'true')
+                        window.location.href = '/home'
                     }
+                    else if (response.status === 201) {
+                        setState({
+                            value: "already existed username",
+                            alert: true,
+                        });
+                    }
+                    else if (response.status === 206) {
+                        setState({
+                            value: "already used email",
+                            alert: true,
+                        });
+                    }
+
                 })
                 .catch(function (error) {
                     console.log(error);
@@ -46,7 +65,10 @@ function Signup(props) {
         if (state.password === state.confirmPassword) {
             sendDetailsToServer()
         } else {
-            props.showError('Passwords do not match');
+            setState({
+                value: "Password not matching",
+                alert: true,
+            });
         }
     }
     return (
@@ -109,6 +131,12 @@ function Signup(props) {
                             onChange={handleChange}
                         />
                     </div>
+                    {state.alert && (
+                        <>
+                            <br></br>
+                            <Alert severity="error">{state.value}</Alert>
+                        </>
+                    )}
                     <button
                         type="submit"
                         className="btn btn-primary"
