@@ -1,7 +1,7 @@
 import React from "react";
-import Hashtag from "./Hashtag";
+import PeopleToFollow from "./PeopleToFollow";
 
-const TrendsHashtag = (props) => {
+const WhoToFollow = (props) => {
   return (
     <div
       class="ui card"
@@ -21,12 +21,12 @@ const TrendsHashtag = (props) => {
             fontWeight: "600",
           }}
         >
-          Trends for you
+          Who to follow
         </div>
-        <Hashtag />
-        <Hashtag />
+        <PeopleToFollow />
+        {/* <PeopleToFollow /> */}
       </div>
     </div>
   );
 };
-export default TrendsHashtag;
+export default WhoToFollow;

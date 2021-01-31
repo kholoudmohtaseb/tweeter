@@ -6,6 +6,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { Link } from 'react-router-dom';
 import '../../App.css'
+
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import GroupRoundedIcon from '@material-ui/icons/GroupRounded';
+import SettingsRoundedIcon from '@material-ui/icons/SettingsRounded';
+import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
+
 const Navbar = ({ toggle }) => {
     const [anchorEl, setAnchorEl] = useState(false);
     const open = Boolean(anchorEl);
@@ -18,18 +24,24 @@ const Navbar = ({ toggle }) => {
         setAnchorEl(anchorEl);
     };
 
+    const LogOut = () => {
+        localStorage.removeItem('token')
+        setAnchorEl(anchorEl);
+        window.location.href = '/login'
+    };
+
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <Nav>
                     <NavbarContainer>
-                        <NavLogo to='home'>
+                        <NavLogo to='Home'>
                             <Img src={logo} />
                             <NavLogoH>Tweeter</NavLogoH>
                         </NavLogo>
                         <NavMenu>
                             <NavItem>
-                                <NavLinks to='home' smooth={true}
+                                <NavLinks to='Home' smooth={true}
                                     duration={500}
                                     spy={true}
                                     exact="true"
@@ -46,19 +58,21 @@ const Navbar = ({ toggle }) => {
                             </NavItem>
 
                         </NavMenu>
+
                         <NavUser onClick={handleMenu} aria-controls="menu-appbar">
-                            <UserImg src='https://cdnb.artstation.com/p/assets/images/images/015/193/525/20190113230710/smaller_square/kevin-schneider-miles-morales-print.jpg?1547442431' />
-                            <UserName>Qamar Tweet</UserName>
-                            <Menu className="profilemenu"
+                            <UserImg src="https://i.pinimg.com/236x/83/ac/b1/83acb189d0fc48b18d609085661a7ac4.jpg" />
+                            <UserName onClick={handleMenu} aria-controls="menu-appbar">Qamar Tweet</UserName>
+                            <Menu className="profilemenu "
                                 id="menu-appbar"
                                 anchorEl={anchorEl}
                                 getContentAnchorEl={null}
                                 open={open}
                                 onClose={handleClose}>
-                                <MenuItem onClick={handleClose} >
-                                    <Link to="home">Profile</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose} >My account</MenuItem>
+
+                                <MenuItem onClick={handleClose} ><Link to="Profile"> <AccountCircleRoundedIcon /> My Profile</Link></MenuItem>
+                                <MenuItem onClick={handleClose} ><Link to="WhoToFollow"> <GroupRoundedIcon /> Group Chat</Link></MenuItem>
+                                <MenuItem onClick={handleClose} ><Link to="Signup"> <SettingsRoundedIcon /> Settings</Link></MenuItem>
+                                <div><MenuItem onClick={LogOut} ><Link to="Login"> <ExitToAppRoundedIcon /> Logout</Link></MenuItem></div>
                             </Menu>
                         </NavUser>
 

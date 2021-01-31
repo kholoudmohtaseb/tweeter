@@ -1,0 +1,4 @@
+[0127/172709.064:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0127/182413.761:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0128/115011.910:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0131/000832.480:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Hotleaf\Application\58.0.3029.81\chrome.dll: The specified module could not be found. (0x7E)

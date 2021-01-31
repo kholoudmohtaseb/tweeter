@@ -2,13 +2,17 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Alert from "@material-ui/lab/Alert";
 
 function Login(props) {
     const [state, setState] = useState({
         email: "",
         password: "",
-        successMessage: null
+        successMessage: null,
+        value: '',
+        alert: false
     })
+
     const handleChange = (e) => {
         const { id, value } = e.target
         setState(prevState => ({
@@ -25,18 +29,38 @@ function Login(props) {
         }
         axios.post('/login', payload)
             .then(function (response) {
+                console.log(response.data)
                 if (response.status === 200) {
-                    console.log('hello')
+                    console.log(response.data)
+                    localStorage.setItem('token', response.data)
+                    // window.location.href = '/home'
+                }
+                if (response.status === 203) {
+                    console.log("hi")
+
+                    setState({
+                        value: "wrong password",
+                        alert: true,
+                    });
+
+                }
+                if (response.status === 204) {
+                    console.log("hi")
+
+                    setState({
+                        value: "wrong email",
+                        alert: true,
+                    });
 
                 }
 
             })
             .catch(function (error) {
-                console.log(error);
+                console.log(error.status);
             });
     }
     return (
-        <div className="login mt-2">
+        <div className="login-form">
             <div className="card col-12 col-lg-4 login-card mt-2 hv-center">
                 <form>
                     <nav className="navbar navbar-dark bg-primary">
@@ -67,6 +91,12 @@ function Login(props) {
                     </div>
                     <div className="form-check">
                     </div>
+                    {state.alert && (
+                        <>
+                            <br></br>
+                            <Alert severity="error">{state.value}</Alert>
+                        </>
+                    )}
                     <button
                         type="submit"
                         className="btn btn-primary"

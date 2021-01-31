@@ -1,7 +1,10 @@
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+
 
 export const ExploreContainer = styled.div`
-background-color:#FAFAFB;
+// background:#FFFFFF;
+background-color:#F2F2F2;
 display:flex;
 justify-content:space-between;
 margin-bottom:90px;
@@ -39,6 +42,8 @@ flex-direction: column;
 justify-content:flex-start;
 width: 280px;
 height: 200px;
+color:#828282;
+
 
 padding:26px 0 ;
 background: #FFFFFF;
@@ -52,21 +57,23 @@ border-radius: 8px;
 `;
 export const SearchFilter = styled.div`
 margin-bottom:23px;
-margin-left:26px;
-color:#828282;
+// margin-left:26px;
+padding-left:26px;
 font-family: Poppins;
 font-style: normal;
 font-weight: 600;
 font-size: 14px;
 line-height: 21px;
 cursor:pointer;
+
+
 `;
 export const Mainbar = styled.div`
 
 
 `;
 export const Searchbar = styled.div`
-width: 50vw;
+width: 44vw;
 height: 54px;
 
 background: #FFFFFF;
@@ -84,8 +91,7 @@ height: 40px;
 border-radius: 8px;
 padding:8px;
 color: #BDBDBD;
-font-size:18px
-
+font-size:25px 
 `;
 
 export const SearchField = styled.input`
