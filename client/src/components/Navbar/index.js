@@ -73,6 +73,7 @@ const Navbar = ({ toggle }) => {
                                 <MenuItem onClick={handleClose} ><Link to="WhoToFollow"> <GroupRoundedIcon /> Group Chat</Link></MenuItem>
                                 <MenuItem onClick={handleClose} ><Link to="Signup"> <SettingsRoundedIcon /> Settings</Link></MenuItem>
                                 <div><MenuItem onClick={LogOut} ><Link to="Login"> <ExitToAppRoundedIcon /> Logout</Link></MenuItem></div>
+                            </Menu>
                         </NavUser>
 
                     </NavbarContainer>

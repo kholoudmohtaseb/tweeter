@@ -13,7 +13,7 @@ import Explore from './components/explore';
 
 // import FormPage from './components/forms/FormPage'
 // import Follow from './components/Follow';
-// import SginUpForm from './components/Login/Signup'
+import SginUpForm from './components/Login/Signup'
 // import TrendsHashtag from './components/TrendsHashtag';
 // import WhoToFollow from './components/WhoToFollow';
 
