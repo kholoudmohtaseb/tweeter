@@ -39,6 +39,7 @@ function App() {
       <Router >
         {nav}
         <Switch>
+          <Route path="/signup" exact component={SginUpForm} />
           <Route path="/login" exact component={LoginForm} />
           <Route path="/signup" exact component={Signup} />
 

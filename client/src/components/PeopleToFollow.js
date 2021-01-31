@@ -1,5 +1,6 @@
 import React from "react";
 import pic from "../components/avatar.png";
+import PersonAddOutlinedIcon from '@material-ui/icons/PersonAddOutlined';
 
 const PeopleToFollow = () => {
   return (
@@ -8,8 +9,8 @@ const PeopleToFollow = () => {
       <div class="ui segment">
         <div class="content">
           <button class="ui right floated primary active button">
-            <i class="user icon"></i>
-          follow
+            {/* <i class="user icon"></i> */}
+            <PersonAddOutlinedIcon /> Follow
         </button>
           {/* <button class="ui right floated primary button">follow</button> */}
           <img class="ui avatar image" src="https://i.pinimg.com/564x/de/9b/64/de9b647e9477af964076ef10989acf98.jpg" />
@@ -29,8 +30,8 @@ const PeopleToFollow = () => {
       <div class="ui segment">
         <div class="content">
           <button class="ui right floated primary active button">
-            <i class="user icon"></i>
-          follow
+            {/* <i class="user icon"></i> */}
+            <PersonAddOutlinedIcon /> Follow
         </button>
           {/* <button class="ui right floated primary button">follow</button> */}
           <img class="ui avatar image" src="https://i.pinimg.com/236x/0d/28/2e/0d282eb00cd56b423d7433a64660b861.jpg" />
@@ -50,8 +51,8 @@ const PeopleToFollow = () => {
       <div class="ui segment">
         <div class="content">
           <button class="ui right floated primary active button">
-            <i class="user icon"></i>
-          follow
+            {/* <i class="user icon"></i> */}
+            <PersonAddOutlinedIcon /> Follow
         </button>
           {/* <button class="ui right floated primary button">follow</button> */}
           <img class="ui avatar image" src="https://i.pinimg.com/236x/3b/e5/cb/3be5cb4794cecb9445bfca093a383494.jpg" />

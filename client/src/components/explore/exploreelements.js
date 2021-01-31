@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const ExploreContainer = styled.div`
-background-color:#FAFAFB;
+// background:#FFFFFF;
+background-color:#FFFFFF;
 display:flex;
 justify-content:space-between;
 margin-bottom:90px;
@@ -42,7 +43,7 @@ height: 200px;
 
 padding:26px 0 ;
 background: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 border-radius: 8px;
 @media screen and (max-width: 700px) {
     width:100px;
@@ -66,11 +67,12 @@ export const Mainbar = styled.div`
 
 `;
 export const Searchbar = styled.div`
-width: 50vw;
+width: 44vw;
 height: 54px;
 
 background: #FFFFFF;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+// box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
 border-radius: 8px;
 padding:10px;
 @media screen and (max-width: 900px) {
@@ -84,8 +86,7 @@ height: 40px;
 border-radius: 8px;
 padding:8px;
 color: #BDBDBD;
-font-size:18px
-
+font-size:25px 
 `;
 
 export const SearchField = styled.input`

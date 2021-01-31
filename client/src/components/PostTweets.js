@@ -7,7 +7,7 @@ import PublicOutlinedIcon from '@material-ui/icons/PublicOutlined';
 
 function PostTweets() {
     return (
-        <div style={{ width: "605px", height: '50px', padding: '5px' }}>
+        <div style={{ width: "615px", height: '10px', padding: '1px', backgroundColor: "#FAFAFB" }}>
             <div className="card gedf-card">
                 <div className="card-header">
                     {/* <ul className="nav nav-tabs card-header-tabs" id="myTab" role="tablist"> */}

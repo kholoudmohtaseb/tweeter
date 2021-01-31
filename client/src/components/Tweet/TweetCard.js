@@ -2,21 +2,21 @@ import React from 'react'
 import pic from "./avatar.png";
 
 const TweetCard = (props) => {
-    return (
-        <div class="ui card" style={{ width: "600px", height: '300px', marginBottom: '150px', padding: '1px' }}>
+  return (
+    <div class="ui card" style={{ width: "600px", height: "auto", marginBottom: '20px', padding: '1px' }}>
       <div class="content">
-        <img class="ui avatar image" src={pic} alt="user img" />
-          {props.username}
-          <div class="meta">{props.createdAt}</div>
+        <img class="ui avatar image" src="https://i.pinimg.com/236x/a7/39/b6/a739b66117d68315626cff61e1da5402.jpg" alt="user img" />
+        {props.username}
+        <div class="meta">{props.createdAt}</div>
       </div>
       <div class="description">
         {props.description}
-        </div>
+      </div>
       <div class="image" >
-        <img src="https://i.pinimg.com/236x/53/5d/ed/535ded0607931f18bfc3d823739d4f84.jpg" alt="tweet img" style={{ width: "600px", height: '200px', padding: '10px' }} />
+        <img src="https://i.pinimg.com/236x/53/5d/ed/535ded0607931f18bfc3d823739d4f84.jpg" alt="tweet img" style={{ width: "600px", height: "auto", padding: '10px' }} />
       </div>
 
-      <div class="ui horizontal segments" style={{ color: "#4F4F4F", boxShadow: "#4F4F4F" }}>
+      <div class="ui horizontal segments" style={{ color: "#4F4F4F", boxShadow: "#4F4F4F", width: "600px" }}>
         <div class="ui segment"  >
           <a href="#" class="card-link" style={{ color: "#4F4F4F", boxShadow: "#4F4F4F" }}><i class="comment icon"></i>comment</a>
         </div>
@@ -31,16 +31,16 @@ const TweetCard = (props) => {
         </div>
       </div>
 
-      <div class="extra content" style={{ width: "600px", height: '30px', padding: '1px' }} >
+      <div class="extra content" style={{ width: "615px", height: "auto", padding: '1px' }} >
         <div class="ui large transparent left icon input">
           <i>
-            <img class="ui avatar image" src={pic} alt="user avatar img" />
+            <img class="ui avatar image" src="https://i.pinimg.com/236x/83/ac/b1/83acb189d0fc48b18d609085661a7ac4.jpg" alt="user avatar img" />
           </i>
           <input type="text" placeholder="Tweet your reply..." />
         </div>
       </div>
     </div>
-    )
+  )
 }
 
 export default TweetCard;
