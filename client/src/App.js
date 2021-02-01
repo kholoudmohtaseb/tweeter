@@ -12,7 +12,7 @@ import SginUpForm from './components/Login/Signup'
 
 import 'semantic-ui-css/semantic.min.css'
 import Explore from './components/explore';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TrendsHashtag from './components/TrendsHashtag';
 import WhoToFollow from './components/WhoToFollow';
