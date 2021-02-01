@@ -28,7 +28,7 @@ function Home(props) {
                 <WhoToFollow />
             </div>
             <div style={{
-                position: 'absolute', left: '40%', top: '600%',
+                position: 'absolute', left: '40%', top: '270%',
                 transform: 'translate(-50%, -50%)', backgroundColor: '#FFF'
             }}>
                 {/* <Mainbar> */}
