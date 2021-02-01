@@ -15,6 +15,7 @@ import {
     SearchBtn
 } from './exploreelements'
 import '../../App.css'
+import SearchPeople from '../PeopleSearch';
 class Explore extends React.Component {
     // eslint-disable-next-line no-useless-constructor
     constructor() {
@@ -22,7 +23,8 @@ class Explore extends React.Component {
         this.state = {
             searchit: '',
             searchResult: '',
-            searchfilter: 'top'
+            searchfilter: 'top',
+            peopleresult: ''
         }
         this.searching = this.searching.bind(this)
         this.handelchange = this.handelchange.bind(this)
@@ -63,7 +65,7 @@ class Explore extends React.Component {
                 .then((response) => {
                     console.log(response.data)
                     this.setState({
-                        searchResult: response.data
+                        peopleresult: response.data
                     })
                 })
                 .catch((err) => {
@@ -141,13 +143,10 @@ class Explore extends React.Component {
 
                                 )}
 
-                                {(this.state.searchResult && this.state.searchfilter === 'people') && (
-                                    this.state.searchResult.map((user, key) =>
-                                        <div key={key} >{user.username}</div>
-                                        // (<TweetCard username={tweet.username} key={key}
-                                        //     createdAt={tweet.createdAt}
-                                        //     description={tweet.description}
-                                        //     images={tweet.images}></TweetCard>)
+                                {(this.state.peopleresult && this.state.searchfilter === 'people') && (
+                                    this.state.peopleresult.map((user, key) =>
+                                        <SearchPeople key={key} user={user}></SearchPeople>
+
                                     )
 
 
